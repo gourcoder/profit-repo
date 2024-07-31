@@ -23,7 +23,7 @@ export default function Contact() {
                 <input type="" className="mail_text_1" placeholder="Phone Number" name="Phone Number"/>
                 <input type="" className="mail_text_1" placeholder="Email" name="Email"/>
                 <textarea className="massage_text" placeholder="Message" rows="5" id="comment" name="Message"></textarea>
-                <div className="send_bt"><a href="#">send</a></div>
+                <div className="send_bt"><Link href="#">send</Link></div>
               </div>
             </div>
             <div className="col-md-6 padding_0">

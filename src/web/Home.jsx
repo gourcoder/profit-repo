@@ -46,9 +46,9 @@ export default function Home() {
                   <h3 className="accounting_text">Register</h3>
                   <p className="lorem_text">Register with Profitology </p>
                   <div className="moremore_bt_1">
-                    <a href="#">
+                    <Link href="#">
                       Learn More <i class="fa-brands fa-youtube"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -61,9 +61,9 @@ export default function Home() {
                   <h3 className="accounting_text">Take Subscription</h3>
                   <p className="lorem_text">Choose Subscription Plan</p>
                   <div className="moremore_bt_1">
-                    <a href="#">
+                    <Link href="#">
                       Learn More <i class="fa-brands fa-youtube"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -76,9 +76,9 @@ export default function Home() {
                   <h3 className="accounting_text">Brokers</h3>
                   <p className="lorem_text">Add Your Broker</p>
                   <div className="moremore_bt_1">
-                    <a href="#">
+                    <Link href="#">
                       Learn More <i class="fa-brands fa-youtube"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -91,9 +91,9 @@ export default function Home() {
                   <h3 className="accounting_text">Select Strategies</h3>
                   <p className="lorem_text">Choose Strategies </p>
                   <div className="moremore_bt_1">
-                    <a href="#">
+                    <Link href="#">
                       Learn More <i class="fa-brands fa-youtube"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
