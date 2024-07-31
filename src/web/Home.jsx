@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </div>
         <div className="header_right">
-          <img src="/images/banner-img.png" className="banner_img" />
+          <img src="/images/banner-img.png" className="banner_img" alt="bannerimg"/>
         </div>
       </div>
       {/* Service Section */}

@@ -36,7 +36,7 @@ export default function About() {
             </div>
             <div className="col-md-4">
               <div>
-                <img src="images/img-1.png" className="image_1" />
+                <img src="images/img-1.png" className="image_1" alt="img-1.png"/>
               </div>
             </div>
           </div>
