@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <>
       {/* Top Bar */}
-      <TopBar />
+      <TopBar alt="images"/>
       {/* Header Section */}
       <div className="header_section">
         <div className="header_left">
-          <NavBar />
+          <NavBar alt="images"/>
           <div className="banner_main">
             <h1 className="banner_taital">
-              ALGO <br />
+              ALGO <br alt="images"/>
               STRATEGIES
             </h1>
             <p className="banner_text">
@@ -130,34 +130,13 @@ export default function Home() {
                 <div className="client_section_2 layout_padding">
                   <ul>
                     <li>
-                      <img src="/images/round-1.png" className="round_1" />
+                      <img src="/images/round-1.png" className="round_1" alt="images"/>
                     </li>
                     <li>
-                      <img src="/images/img-11.png" className="image_11" />
+                      <img src="/images/img-11.png" className="image_11" alt="images"/>
                     </li>
                     <li>
-                      <img src="/images/round-2.png" className="round_2" />
-                    </li>
-                  </ul>
-                  <p className="dummy_text">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem
-                  </p>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <h1 className="what_taital">what is syas our clients</h1>
-                <div className="client_section_2 layout_padding">
-                  <ul>
-                    <li>
-                      <img src="/images/round-1.png" className="round_1" />
-                    </li>
-                    <li>
-                      <img src="/images/img-11.png" className="image_11" />
-                    </li>
-                    <li>
-                      <img src="/images/round-2.png" className="round_2" />
+                      <img src="/images/round-2.png" className="round_2" alt="images"/>
                     </li>
                   </ul>
                   <p className="dummy_text">
@@ -172,13 +151,34 @@ export default function Home() {
                 <div className="client_section_2 layout_padding">
                   <ul>
                     <li>
-                      <img src="/images/round-1.png" className="round_1" />
+                      <img src="/images/round-1.png" className="round_1" alt="images"/>
                     </li>
                     <li>
-                      <img src="/images/img-11.png" className="image_11" />
+                      <img src="/images/img-11.png" className="image_11" alt="images"/>
                     </li>
                     <li>
-                      <img src="/images/round-2.png" className="round_2" />
+                      <img src="/images/round-2.png" className="round_2" alt="images"/>
+                    </li>
+                  </ul>
+                  <p className="dummy_text">
+                    It is a long established fact that a reader will be
+                    distracted by the readable content of a page when looking at
+                    its layout. The point of using Lorem
+                  </p>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <h1 className="what_taital">what is syas our clients</h1>
+                <div className="client_section_2 layout_padding">
+                  <ul>
+                    <li>
+                      <img src="/images/round-1.png" className="round_1" alt="images"/>
+                    </li>
+                    <li>
+                      <img src="/images/img-11.png" className="image_11" alt="images"/>
+                    </li>
+                    <li>
+                      <img src="/images/round-2.png" className="round_2" alt="images"/>
                     </li>
                   </ul>
                   <p className="dummy_text">
