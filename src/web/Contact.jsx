@@ -1,5 +1,6 @@
 import NavBar from './NavBar';
 import TopBar from './TopBar';
+import { Link } from "react-router-dom";
 
 export default function Contact() {
     return <>
