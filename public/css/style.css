@@ -244,7 +244,7 @@ button {
 }
 
 .logo {
-    width: 25%;
+    width: 50%;
     float: left;
 }
 
@@ -258,13 +258,13 @@ button {
     color: #2e2d2d;
     text-transform: uppercase;
 }
-.navbar-expand-lg .navbar-nav .nav-link:hover
+/* .navbar-expand-lg .navbar-nav .nav-link:hover
 {
     text-decoration: overline;
     text-shadow: 1px 1px chocolate;
-}
+} */
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: #1b5a8d;
+    color: #07af61;
 }
 .banner_main{
     width: 100%;

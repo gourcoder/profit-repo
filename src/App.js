@@ -6,7 +6,7 @@ import Pricing from './web/Pricing';
 import Contact from './web/Contact';
 
 import {RegLoginCommon, Register , Login} from './web/Login'
-import Read from "./web/Read";
+import ReadMore from "./web/ReadMore";
 
 export default function App()
 {
@@ -22,7 +22,7 @@ export default function App()
         <Route path="login" element={<Login/>}/>
         <Route path="register" element={<Register/>}/>
       </Route>
-      <Route path="/readmore" element={<Read/>}/>
+      <Route path="/readmore" element={<ReadMore/>}/>
     </Routes>
 
   </>

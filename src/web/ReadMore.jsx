@@ -1,17 +1,21 @@
 import { Link } from "react-router-dom";
-
+import TopBar from "./TopBar";
+import NavBar from './NavBar';
 export default function Read() {
-  return (
-    <>
+  return <>
+    {/* Top Bar */}
+    <TopBar />
+    {/* Header Section */}
+    <div className="header_section">
+      <div className="header_left">
+        <NavBar/>
+      </div>
+    </div>
+    <div className="services_section layout_padding">
       <div className="container">
-        {/* <!-- Outer Row --> */}
         <div className="row justify-content-center">
+          <h1 className="services_taital">Content</h1>
           <div className="col-xl-10 col-lg-12 col-md-9 ">
-            <Link to="/" title="Back">
-              <b className="backlink">
-                <i class="fa-solid fa-arrow-left" style={{borderRadius:"50%",border:"3px solid black",padding:"3px"}}></i>
-              </b>
-            </Link>
             <div className="card o-hidden border-0 shadow-lg my-5">
               <p>
                 Algorithmic trading software, often referred to as algo trading
@@ -58,6 +62,6 @@ export default function Read() {
           </div>
         </div>
       </div>
-    </>
-  );
+    </div>
+  </>
 }
