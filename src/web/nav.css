@@ -1,0 +1,55 @@
+#drop{
+    background-color: rgb(194, 191, 193);
+    transition: 1s;
+}
+.dropdown-item{
+    border-radius: 10px ;
+    background: teal;
+    /* mix-blend-mode: luminosity; */
+    margin-left: 10px;
+    font-weight: bold;
+    color: white;
+}
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 10px ;
+    background-color: rgb(1, 1, 1);
+    gap: 5px;
+    transition: 1s;
+    
+  }
+  #demat-link-btn{
+    color:blue;
+    border-left: 2px solid   blueviolet;
+    border-top: 1px solid    blueviolet;
+    border-right: 2px solid  blueviolet;
+    border-bottom: 1px solid blueviolet;
+    border-radius: 10px;
+  }
+  #demat-link-btn:hover{
+    color:white;
+    background-color: rgb(104, 61, 247);
+    box-shadow: 0px 0px 10px 2px rgb(163, 3, 203);
+  }
+  #login-link-btn{
+    color: green;
+    border-left: 2px solid green;
+    border-top: 1px solid green;
+    border-right: 2px solid green;
+    border-bottom: 1px solid green;
+    border-radius: 10px;
+  }
+  #login-link-btn:hover{
+    
+    box-shadow: 0px 0px 10px 2px rgb(3, 203, 113);
+    background-color: rgb(3, 21, 79);
+    color: white;
+  }
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+  }

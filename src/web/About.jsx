@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
-import TopBar from "./TopBar";
+// import TopBar from "./TopBar";
+import Social from './Social';
 
 export default function About() {
   return (
     <>
       {/* Top Bar */}
-      <TopBar />
+      {/* <TopBar /> */}
       {/* Header Section */}
       <div className="header_section">
-        <div className="header_left">
           <NavBar />
+        <div className="header_left">
         </div>
       </div>
       <div className="services_section layout_padding">
@@ -41,6 +42,7 @@ export default function About() {
             </div>
           </div>
         </div>
+        <Social/>
       </div>
     </>
   );

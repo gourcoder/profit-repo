@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
-import TopBar from "./TopBar";
+// import TopBar from "./TopBar";
+import Social from './Social';
+
 
 export default function Home() {
   return (
     <>
       {/* Top Bar */}
-      <TopBar alt="images"/>
+      {/* <TopBar /> */}
       {/* Header Section */}
       <div className="header_section">
+          <NavBar/>
         <div className="header_left">
-          <NavBar alt="images"/>
           <div className="banner_main">
             <h1 className="banner_taital">
-              ALGO <br alt="images"/>
-              STRATEGIES
+            ALGO TRADES <br/>
+            WEALTH UPGRADES
             </h1>
             <p className="banner_text">
               Algorithmic trading software, often referred to as algo trading
@@ -191,7 +193,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Social/>
       </div>
+      
     </>
   );
 }

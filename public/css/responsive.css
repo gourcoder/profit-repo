@@ -181,7 +181,7 @@ width: 30%;
     }
     .sporrt_text { margin-top: 0px; font-size: 24px;}
     .email_btn { padding: 41px;}
-    .btn-primary {max-width: 144px; }
+    .btn-primary {max-width: 144px;}
     .titlepage h2::after {width: 79%;}
     .about-box .titlepage h2::after {width: 73%;
        right: -88px;

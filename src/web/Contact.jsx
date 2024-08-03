@@ -1,15 +1,17 @@
 import NavBar from './NavBar';
-import TopBar from './TopBar';
+// import TopBar from './TopBar';
 import { Link } from "react-router-dom";
+import Social from './Social';
+
 
 export default function Contact() {
     return <>
         {/* Top Bar */}
-        <TopBar/>
+        {/* <TopBar/> */}
         {/* Header Section */}
         <div className="header_section">
-            <div className="header_left">
                 <NavBar />                
+            <div className="header_left">
             </div>
         </div>
         <div className="contact_section layout_padding">
@@ -29,12 +31,13 @@ export default function Contact() {
             </div>
             <div className="col-md-6 padding_0">
               <div className="map-responsive">
-                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0"  allowfullscreen="" title='gmap'></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.829890672891!2d73.7003519!3d24.560539899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476a7b077be067b9%3A0xc7c29a15e6080d99!2sProfitology!5e0!3m2!1sen!2sin!4v1722594598663!5m2!1sen!2sin" width="600" height="400" frameborder="0"  allowfullscreen="" title='gmap'></iframe>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <Social/>
     </div>
     </>
 }
