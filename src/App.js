@@ -4,9 +4,11 @@ import About from "./web/About";
 import Algo from "./web/Algo";
 import Pricing from './web/Pricing';
 import Contact from './web/Contact';
-
-import {RegLoginCommon, Register , Login} from './web/Login'
 import ReadMore from "./web/ReadMore";
+import {RegLoginCommon, Register , Login} from './web/Login'
+// import Main from "./admin/Main";
+
+
 
 export default function App()
 {
@@ -24,6 +26,6 @@ export default function App()
       </Route>
       <Route path="/readmore" element={<ReadMore/>}/>
     </Routes>
-
+  {/* <Main/> */}
   </>
 }

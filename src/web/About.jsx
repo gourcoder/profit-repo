@@ -14,7 +14,7 @@ export default function About() {
         <div className="header_left">
         </div>
       </div>
-      <div className="services_section layout_padding">
+      <div className="services_section layout_padding mt-5">
         <div className="container">
           <div className="row">
             <div className="col-md-8">
@@ -31,7 +31,7 @@ export default function About() {
                 from market volatility or any platform-related issues.{" "}
               </p>
               
-              <div className="moremore_bt">
+              <div className="more_bt  mt-3">
                 <Link to="/readmore">Read More </Link>
               </div>
             </div>

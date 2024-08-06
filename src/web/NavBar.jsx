@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import './nav.css';
 export default function Header()
 {
-    return <>
-        <nav className="navbar navbar-expand-lg  bg-light">
-          <div className="logo"><Link to="/"><img src="/images/logo.png" alt="logoimg"/></Link></div>
+    return <div className="site-header header header-transparent webNavBar navbar-fixed-top">
+        <nav className="navbar navbar-expand-lg">
+          <div className="logo"><Link to="/"><img src="/images/logo.svg" alt="logoimg"/></Link></div>
           <button className="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -18,15 +18,17 @@ export default function Header()
               </li>
               <li className="nav-item">
               <div className="dropdown">
-                    <Link 
-                        data-mdb-button-init data-mdb-ripple-init data-mdb-dropdown-init
+                    <a 
+                      dropdata-mdb-ripple-init data-mdb-dropdown-init
                         className="nav-link"
                         id="dropdownMenuButton"
                         type="button"
-                        data-mdb-toggle="dropdown">
+                        data-mdb-toggle="dropdown"
+                        href="#pro"
+                        >
                           products
-                      </Link>
-                      <ul className="dropdown-menu" id="dropdata-mdb-ripple-init data-mdb-dropdown-init">
+                      </a>
+                      <ul className="dropdown-menu" id="drop">
                         <li><Link className="dropdown-item">EQUITY</Link></li>
                         <li><Link className="dropdown-item">COMMODITY</Link></li>
                         <li><Link className="dropdown-item">MUTUAL FUND</Link></li>
@@ -43,14 +45,18 @@ export default function Header()
                 <Link className="nav-link" to="/contact">Contact</Link>
               </li>
               <li className="nav-item ">
+                <div className="nav_btn_animate">
                 <Link className="nav-link" id="login-link-btn" to="/user/login">Login</Link>
+                </div>
               </li>
               <li className="nav-item ">
-                <a href="https://cutt.ly/VezcJoaa" className="nav-link" id="demat-link-btn" to="">Open Demat</a>
+                <div className="nav_btn_animate">
+                <a href="https://cutt.ly/VezcJoaa" target="_blank" className="nav-link" id="demat-link-btn" to="">Open Demat</a>
+                </div>
               </li>
             </ul>
           </div>
         </nav>
   
-    </>
+    </div>
 }

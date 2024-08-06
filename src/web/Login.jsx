@@ -1,6 +1,57 @@
 import { Link, Outlet } from "react-router-dom"
+import apiCall , {URLS} from '../webservice/ApiCallService';
+import { useRef, useState } from "react";
+export function Register() 
+{
+    const nameRef = useRef()
+    const mobRef = useRef()
+    const emailRef = useRef()
+    const passRef = useRef()
 
-export function Register() {
+    const [isRegRun,setIsRegRun] = useState(false);
+    const [msg,setMsg] = useState("")
+    const [isError,setIsError] = useState(false)
+
+    const register = (event)=>
+    {
+        event.preventDefault()
+        setIsRegRun(true)
+        setMsg("")
+        const data = {
+            name : nameRef.current.value,
+            mobile : mobRef.current.value,
+            email : emailRef.current.value,
+            password  : passRef.current.value
+        }
+        apiCall.postCall(URLS.REGISTER,data)
+        .then(result=>
+        {
+            if(result.status)
+            {
+                setMsg(result.msg)
+                setIsError(false)
+            }
+            else
+            {
+                setIsError(true)
+                if(result.errors?.length>0)
+                {
+                    const emsg = result.errors.map(e=>e.errMsg).join(',');
+                    setMsg(emsg)
+                }else{
+                    setMsg(result.msg)
+                }
+            }
+            event.target.reset()
+        })
+        .catch(err=>
+        {
+            console.log(err);   
+        }).finally(()=>{
+            setIsRegRun(false)            
+        })
+    }
+
     return <>
         <div className="contact_section layout_padding">
             <div className="container-fluid">
@@ -9,18 +60,34 @@ export function Register() {
                 <div className="contact_section2">
                     <div className="row">
                         <div className="col-md-12 padding_0">
+                            <form onSubmit={register}>
                             <div className="mail_section">
 
-                                <input type="text" className="mail_text_1" placeholder="Your Name" required />
+                                <input type="text" ref={nameRef} className="mail_text_1" placeholder="Your Name" required />
 
-                                <input type="text" className="mail_text_1" placeholder="Mobile Number" required />
+                                <input type="text" ref={mobRef} className="mail_text_1" placeholder="Mobile Number" 
+                                minLength="10" maxLength="10" required />
 
-                                <input type="email" className="mail_text_1" placeholder="Email" name="Email" required />
+                                <input type="email" ref={emailRef} className="mail_text_1" placeholder="Email" required />
 
-                                <input type="password" className="mail_text_1" placeholder="Password" required />
+                                <input type="password" ref={passRef} className="mail_text_1" placeholder="Password" minLength="6" maxLength="10" required />
+                                
+                                <button className="btn btn-success mt-3 mb-3">Register</button>
 
-                                <div className="send_bt btn btn-success">Register</div>
+                                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+
+                                {isRegRun?<button class="btn" disabled>
+                                    <span class="spinner-grow spinner-grow-sm"></span>
+                                    <b className="text-danger">Registering Data ....</b>
+                                </button>:""}
+
+                                {msg.length>0?<span> 
+                                <i className={isError?'fa-solid fa-circle-exclamation  text-danger':'fa-solid fa-circle-exclamation  text-info'}></i>
+                                &nbsp;&nbsp;   
+                                <b className="text-danger">{msg}</b>
+                                </span>:""}
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -146,7 +146,7 @@ width: 30%;
 .navbar-expand-lg .navbar-nav .nav-link { padding-right: 5px; padding-left: 15px; font-size: 14px; }
 .banner_taital { font-size: 50px; padding-top: 50px; }
 .btn_main { padding-top: 20px; }
-.services_section { padding-top: 65px; padding-bottom: 15px; }
+.services_section { padding-top: 0px; padding-bottom: 0px; }
 .project_main { padding-top: 100px; }
 .footer_images_right { width: 32%; }
 .moremore_bt { margin-top: 0px; }
