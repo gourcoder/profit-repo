@@ -223,7 +223,7 @@ blockquote {
 
 button {
      border: 0;
-     margin: 0;
+     margin: 0 ;
      padding: 0;
      cursor: pointer;
 }
@@ -233,8 +233,9 @@ button {
 }
 
 .layout_padding {
-     padding-top: 0px;
-     padding-bottom: 0px;
+     padding-top: 100px;
+     padding-bottom: 10px;
+     /* mix-blend-mode: difference; */
 }
 .padding_0{
     padding: 0px;
@@ -391,8 +392,7 @@ button {
     float: left;
     background-image: url(../images/services-bg.png);
     height: auto;
-    margin-top: 10px;
-    padding-bottom: 60px;
+    padding-bottom: 10px;
     background-size: 100%;
 }
 
@@ -740,10 +740,10 @@ button {
     padding: 20px 3px 0px 3px;
 }
 .client_section {
-    /* padding-top: 10px; */
+    padding-top: 10px;
     width: 100%;
     float: left;
-    /* padding-bottom: 140px; */
+    padding-bottom: 150px;
 }
 .client_section_2{
     width: 100%;
@@ -781,7 +781,7 @@ button {
     height: 15px;
     background-color: #ff5a58;
     border-radius: 4px;
-    bottom: -80px;
+    top: -300px;
 }
 
 .contact_section {
