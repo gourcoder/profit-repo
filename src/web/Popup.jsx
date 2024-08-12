@@ -63,6 +63,7 @@ const styles = {
     mixBlendMode: 'color-burn',
   },
   button: {
+    background:"transparent",
     margin:'0px',
     padding: '0px',
     color: 'black',
