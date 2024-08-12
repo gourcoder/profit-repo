@@ -1,6 +1,10 @@
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet, useNavigate } from "react-router-dom"
 import apiCall , {URLS} from '../webservice/ApiCallService';
 import { useRef, useState } from "react";
+
+import {setUserData} from '../reduxconfig/UserSlice';
+import { useDispatch } from "react-redux";
+
 export function Register() 
 {
     const nameRef = useRef()
@@ -96,7 +100,47 @@ export function Register()
     </>
 }
 
-export function Login() {
+export function Login() 
+{
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const emailRef = useRef()
+    const passRef = useRef()
+
+    const [isLoginRun,setIsLoginRun] = useState(false);
+    const [msg,setMsg] = useState("")
+
+    const login = (event)=>
+    {
+        event.preventDefault()
+        setIsLoginRun(true)
+        setMsg("")
+        const data = {
+            email : emailRef.current.value,
+            password  : passRef.current.value
+        }
+        apiCall.postCall(URLS.LOGIN,data)
+        .then(result=>
+        {
+            console.log(result)
+            setMsg(result.msg)
+            if(result.status)
+            {
+                dispatch(setUserData(result.data))
+                navigate(`/${result.data.role}/dashboard`)
+                event.target.reset()    
+            }
+            
+        })
+        .catch(err=>
+        {
+            console.log(err);   
+        }).finally(()=>{
+            setIsLoginRun(false)            
+        })
+    }
+
     return <>
         <div className="contact_section layout_padding">
             <div className="container-fluid">
@@ -104,15 +148,26 @@ export function Login() {
 
                 <div className="contact_section2">
                     <div className="row">
+                        <form onSubmit={login}>
                         <div className="col-md-12 padding_0">
                             <div className="mail_section">
-                                <input type="email" className="mail_text_1" placeholder="Email" name="Email" required />
+                                <input type="email" className="mail_text_1" placeholder="Email" ref={emailRef} required />
 
-                                <input type="password" className="mail_text_1" placeholder="Password" required />
+                                <input type="password" className="mail_text_1" ref={passRef} placeholder="Password" required />
 
-                                <div className="send_bt btn btn-success">Login</div>
+                                <button className="btn btn-success mt-3 mb-3">Login</button>
+
+                                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+
+                                {isLoginRun?<button class="btn" disabled>
+                                    <span class="spinner-grow spinner-grow-sm"></span>
+                                    <b className="text-danger">Login ....</b>
+                                </button>:""}
+
+                                <b className="text-danger mt-3">{msg}</b>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>

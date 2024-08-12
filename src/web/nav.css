@@ -1,15 +1,15 @@
 
-.webNavBar #drop{
+/* .webNavBar #drop{
     background-color: rgb(156, 5, 164);
     transition: 1s;
-}
-.webNavBar #drop .dropdown-item{
+} */
+/* .webNavBar #drop .dropdown-item{
     box-shadow: 0px 0px 20px 1px rgb(171, 97, 97);
     border-radius: 10px ; 
     margin-left: 10px;
     color: rgb(236, 231, 227);
-}
-.webNavBar .dropdown:hover>#drop {
+} */
+/* .webNavBar .dropdown:hover>#drop {
     display: block;
     width: 400px;
     display: flex;
@@ -20,11 +20,11 @@
     transition: 1s;
     font-weight: bold;
     
-  }
-.webNavBar .navbar #navbarSuppotedContent .navbar-nav .dropdown #drop .dropdown-item:hover{
+  } */
+/* .webNavBar .navbar #navbarSuppotedContent .navbar-nav .dropdown #drop .dropdown-item:hover{
   background-color: black;
   color: aliceblue;
-}
+} */
   #demat-link-btn{
     color: white;
     border-bottom: 0px;
@@ -58,7 +58,7 @@
     cursor: pointer;
     padding: 0px 10px;
     width: 150px;
-    background:linear-gradient(#3a35358d, #8518d2), linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+    background:linear-gradient(#000000, #8518d2), linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
     background-origin: border-box;
     background-clip: padding-box, border-box, border-box;
     background-size: 200%;
@@ -90,12 +90,3 @@
       --m: 2rem;
     }
   }
-
-  /* #navbarSupportedContent .navbar-nav{
-    background-color: #fff;
-    position: fixed;
-    right: 10px;
-    top: 30px;
-    z-index: 1;
-    mix-blend-mode: darken;
-  } */

@@ -18,9 +18,11 @@ export default function Read() {
         <div className="row justify-content-center">
           <h1 className="services_taital">Content</h1>
           <div className="col-xl-10 col-lg-12 col-md-9 ">
-            <div className="card o-hidden border-0 shadow-lg my-5">
+            <div className="card o-hidden border-0 shadow-lg ">
               <p>
-                Algorithmic trading software, often referred to as algo trading
+              Profitology ,provide AI based technology for support automate
+              trading, execute numbers of orders although within properly
+              risk management.Algorithmic trading software, often referred to as algo trading
                 software, represents a pivotal advancement in financial markets.
                 It leverages sophisticated algorithms to execute trades at
                 speeds and frequencies impossible for human traders, offering

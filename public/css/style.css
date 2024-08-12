@@ -49,7 +49,8 @@
 
 * {
      box-sizing: border-box !important;
-     transition: ease all 0.5s;
+     font-family: "Segoe UI Regular" !important;
+     /* transition: ease all 0.5s; */
 }
 
 html {
@@ -60,11 +61,30 @@ html {
 body {
      color: #161212;
      font-size: 14px;
-     font-family: Poppins;
+     font-family: "Segoe UI Regular";
      line-height: 1.80857;
      font-weight: normal;
      overflow-x: hidden !important;
      position: relative;
+}
+::-webkit-scrollbar{
+    position: absolute;
+    scroll-behavior: smooth;
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(219, 100, 2);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover ::-webkit-scrollbar{
+    width: 15px;
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-track{
+    background: transparent;
 }
 
 a {
@@ -233,7 +253,7 @@ button {
 }
 
 .layout_padding {
-     padding-top: 100px;
+     padding-top: 10px;
      padding-bottom: 10px;
      /* mix-blend-mode: difference; */
 }
@@ -246,7 +266,8 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-color: rgba(80, 18, 124, 0.851);
+    background:linear-gradient(to top, rgb(229,104,7),rgb(106,9,159), rgb(106,9,159));
+    box-shadow: 0px 10px 100px 1px rgb(106,9,159);
 }
 .header_bg{
   width: 100%;
@@ -331,12 +352,14 @@ button {
     padding-top: 80px;
     text-transform: uppercase;
     font-weight: 500;
+    font-family: "Segoe UI Regular";
 }
 
 .banner_text {
     width: 90%;
     float: left;
     font-size: 16px;
+    font-weight: 400;
     color: #ffb14b;
     margin-left: 0px;
 }
@@ -388,12 +411,17 @@ button {
     border: 2px solid #ff5a58;
 }
 .services_section {
-    width: 100%;
-    float: left;
-    background-image: url(../images/services-bg.png);
-    height: auto;
-    padding-bottom: 10px;
-    background-size: 100%;
+    width: 100% ;
+    float: left ;
+    height: auto ;
+    padding-bottom: 10px ;
+    background-size: 100% ;
+    padding-top: 10px;
+}
+.cnt_trd_algo{
+    margin-top: 10px;
+    box-shadow: 0px 30px 100px 5px grey;
+    border-radius: 40px 40px 0px 0px;
 }
 
 .services_taital {
@@ -428,6 +456,14 @@ button {
     color: #060606;
     margin-left: 0px;
 }
+.services_key_points{
+    margin-top: 100px;
+    font-size: 16px;
+    color: #060606;
+    font-weight: 400;
+    margin-left: 0px;
+    text-transform: uppercase;
+}
 .moremore_bt {
     width: 170px;
     float: left;
@@ -455,9 +491,22 @@ button {
     float: left;
 }
 
+.simply-points{
+    font-size: 16;
+    color: rgba(140, 0, 255, 0.749);
+    font-weight: 600;
+
+}
+.pnt_cnt{
+   color: black;
+   font-size: 13px;
+   font-weight:400 ;
+}
+
+
 .what_we_do_section{
-    padding-top:30px;
-    padding-bottom:50px;
+    padding-top:0px;
+    padding-bottom:40px;
     width: 100% ;
     float: left ;
 }
@@ -492,6 +541,7 @@ button {
 .what_text {
     width: 100%;
     float: left;
+    font-weight: 400;
     font-size: 16px;
     color: #060606;
     margin-left: 0px;
@@ -501,17 +551,19 @@ button {
 .what_we_do_section_2{
     width: 100%;
     float: left;
-    margin-top: 100px;
+    margin-top: 10px;
 }
+
 .box_main {
     width: 100%;
     float: left;
-    background-color: rgba(80, 18, 124, 0.851);
-    border-radius: 10px;
-    padding: 30px 0px;
+    border-radius: 20px;
+    padding: 50px 0px;
+    background:linear-gradient(to bottom,rgb(229,104,7),rgb(106,8,158));
+    box-shadow: 0px 20px 50px 1px rgb(118, 118, 121);
 }
 .box_main:hover{
-    background-color: #ff5a58;
+    mix-blend-mode: darken;
 }
 .box_main.active {
     background-color: #ff5a58;
@@ -521,50 +573,66 @@ button {
     float: left;
     text-align: center;
     min-height: 70px;
-    color:rgb(238, 150, 10);
+    color:rgb(205, 205, 2);
 }
 .accounting_text{
     width: 100%;
     float: left;
     font-size: 20px;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     text-transform: uppercase;
+    font-weight: 400;
+    font-family: "Segoe UI Regular";
 }
 .lorem_text{
     width: 100%;
     float: left;
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
     text-align: center;
     margin-left: 0px;
+    font-family: "Segoe UI Regular";
 }
 .moremore_bt_1 {
     width: 170px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     margin-top: 30px;
+    font-weight: 500;
+    font-family: "Segoe UI Regular";
 }
 
-.moremore_bt_1 a {
+.moremore_bt_1{
     width: 100%;
     float: left;
-    font-size: 16px;
+    font-size: 11px;
     color: #ffffff;
-    border: 2px solid #ffffff;
     text-align: center;
-    padding: 10px 0px;
-    border-radius: 40px;
+    padding: 10px 10px;
+  
 }
-.moremore_bt_1 a:hover {
+.moremore_bt_1 :hover {
     color: #ffffff;
-    border: 2px solid #ffffff;
 }
 .project_section{
     width: 100%;
     float: left;
     padding-bottom: 90px;
 }
+.our_products{
+    margin-top: 70px;
+}
+
+.block_point{
+    /* margin: 1px; */
+    padding: 10px;
+}
+
+.boxproducts{
+    background: rgb(82, 4, 177);
+}
+
 .project_main{
     width: 100%;
     float: left;
@@ -740,7 +808,8 @@ button {
     padding: 20px 3px 0px 3px;
 }
 .client_section {
-    padding-top: 10px;
+    margin-top: 100px;
+    padding-top: 110px;
     width: 100%;
     float: left;
     padding-bottom: 150px;
@@ -851,8 +920,9 @@ button {
 .footer_section{
     width: 100%;
     float: left;
-    background-color: #121212;
+    background-color: #000000;
     height: auto;
+    padding-top: 0px;
 }
 .about_text{
     width: 100%;
@@ -917,22 +987,28 @@ button {
     float: left;
     padding: 35px 15px 0px 0px;
 }
-.footer_images{
+
+
+.disclaimer_section{
     width: 100%;
-    float: left;
+    margin-top: 30px;
+    text-align: center;
 }
-.footer_images_left {
-    width: 32%;
-    float: left;
+.disclaimer_text::before{
+    content: "DISCLAIMER";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    translate:-50%;
+    font-weight: 500;
+    font-size: medium;
+    color: rgb(246, 156, 156);
 }
-.footer_images_right{
-    width: 50%;
-    float: left;
-}
-.image_12 {
-    width: 88%;
-    float: left;
-    margin-top: 15px;
+.disclaimer_text{
+    position: relative;
+    color: rgb(234, 225, 221);
+    text-align: center;
+    font-size: small;
 }
 
 .copyright_section {
@@ -941,6 +1017,7 @@ button {
     border-top: 1px solid #fff;
     margin-top: 55px;
     text-align: center;
+    background-color:rgb(240, 236, 244) ;
 }
 .copyright_text {
     width: 100%;
@@ -1057,3 +1134,51 @@ button {
         opacity: 1
     }
 }
+
+
+
+
+#inner_box {
+    margin-left: 20px;
+    border: calc(0.08 * var(--m)) solid transparent;
+    border-top: none;
+    position: relative;
+    color: #4000ff;
+    letter-spacing: 2px;
+    font-size: 25px;
+    border-radius: calc(0.6 * var(--m));
+    font-weight: bolder;
+    font-family: "Segoe UI Regular";
+    background:linear-gradient(#faa35cf2, #7112ee), linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(17, 17, 233, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-size: 200%;
+    animation: animate 2s infinite linear;
+  }
+
+  #inner_box::before {
+    content: '';
+    background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    /* bottom: -20%; */
+    z-index: -5;
+    background-size: 200%;
+    animation: pop 2s infinite linear;
+    filter: blur(calc(0.8 * var(--m)));
+  }
+    #inner_box:hover, #inner_box:hover::before{
+    animation: pop 1.5s infinite linear;
+    font-weight: 600;
+  }
+
+  @keyframes pop {
+    0% {background-position: 0}
+    100% {background-position: 200%}
+  }
+  @media screen and (max-width: 1000px) {
+    :root {
+      --m: 2rem;
+    }
+  }

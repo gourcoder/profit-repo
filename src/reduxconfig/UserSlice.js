@@ -7,7 +7,8 @@ function getLocalData()
         return {
             islogin : false , 
             name : undefined,
-            token : undefined
+            token : undefined,
+            role : undefined
         }
     }else
         return JSON.parse(uinfo)
@@ -21,13 +22,15 @@ const slice = createSlice({
     reducers:
     {
         setUserData : (state,action)=>{
-            state.value = {...action,islogin:true}
+
+            state.value = {...action.payload,islogin:true}
         },
         delUserData : (state,action)=>{
             state.value = {
                 islogin : false , 
                 name : undefined,
-                token : undefined
+                token : undefined,
+                role : undefined
             }
         }
     }

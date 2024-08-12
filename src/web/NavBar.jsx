@@ -1,7 +1,16 @@
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link, useNavigate } from "react-router-dom";
 import './nav.css';
-export default function Header()
-{
+const Header=({sectionRef})=>{
+    const navigate=useNavigate()
+    const scrollTosection=()=>{
+      if(sectionRef===undefined){
+        navigate("/",{state:{scroll:"our_products"}});
+      }
+      else
+        sectionRef.current.scrollIntoView({behavior:"smooth"});
+      }
+
     return <div className="site-header header header-transparent webNavBar navbar-fixed-top">
         <nav className="navbar navbar-expand-lg">
           <div className="logo"><Link to="/"><img src="/images/logo.svg" alt="logoimg"/></Link></div>
@@ -17,25 +26,15 @@ export default function Header()
                 <Link className="nav-link" to="/about">About</Link>
               </li>
               <li className="nav-item">
-              <div className="dropdown">
-                    <a 
+              <div className="dropdown" >
+                    <button style={{background:"transparent",fontWeight:"600"}}
                       dropdata-mdb-ripple-init data-mdb-dropdown-init
                         className="nav-link"
                         id="dropdownMenuButton"
                         type="button"
-                        data-mdb-toggle="dropdown"
-                        href="#pro"
-                        >
+                        data-mdb-toggle="dropdown" onClick={scrollTosection}>
                           products
-                      </a>
-                      <ul className="dropdown-menu" id="drop">
-                        <li><Link className="dropdown-item">EQUITY</Link></li>
-                        <li><Link className="dropdown-item">COMMODITY</Link></li>
-                        <li><Link className="dropdown-item">MUTUAL FUND</Link></li>
-                        <li><Link className="dropdown-item">LOAN</Link></li>
-                        <li><Link className="dropdown-item">INSURANCE</Link></li>
-                        <li><Link className="dropdown-item">STOCK MARKET TRAINING</Link></li>
-                      </ul>
+                      </button>
                     </div>
               </li>
               <li className="nav-item">
@@ -60,3 +59,8 @@ export default function Header()
   
     </div>
 }
+
+
+
+
+export default Header
