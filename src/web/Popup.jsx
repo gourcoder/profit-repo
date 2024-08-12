@@ -11,7 +11,7 @@ const Popup = ({ message, onClose }) => {
       <Confetti
         width={width}
         height={height}
-        numberOfPieces={100}
+        numberOfPieces={150}
         gravity={0.2}
         colors={['#ff0', '#f0f', '#0ff', '#0f0', '#00f']}
       />
@@ -63,7 +63,6 @@ const styles = {
     mixBlendMode: 'color-burn',
   },
   button: {
-    background:"transparent",
     margin:'0px',
     padding: '0px',
     color: 'black',
