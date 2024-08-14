@@ -7,12 +7,14 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import { FaChartLine, FaGlobe, FaLightbulb, FaRupeeSign, FaTradeFederation, FaUser, FaUserTie } from "react-icons/fa";
-
+import ReadMore from "./ReadMore";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const [read,setRead]=useState(false)
   const sectionRef = useRef(null);
   const location = useLocation();
+  const inforef=useRef(null);
   useEffect(() => {
     if (location.state && location.state.scroll === sectionRef.current.id) {
       sectionRef.current.scrollIntoView({ behavior: "smooth" });
@@ -70,9 +72,12 @@ export default function Home() {
       }
     );
   }, [location]);
-
+  const gotoform=()=>{
+    alert(inforef.current)
+    inforef.current.scrollIntoView({ behavior: "smooth" });  }
   return (
     <>
+      {read?<ReadMore setRead={setRead}/>:<></>}
       {/* Top Bar */}
       {/* <TopBar /> */}
       {/* Header Section */}
@@ -106,7 +111,7 @@ export default function Home() {
             </p>
             <div className="btn_main">
               <div className="more_bt ">
-                <Link to="/readmore">Read More </Link>
+                <Link onClick={()=>setRead(true)}>Read More </Link>
               </div>
               <div className="more_bt">
                 <Link to="/user/login">Get started</Link>
@@ -116,7 +121,7 @@ export default function Home() {
         </div>
         <div className="header_right">
           <img
-            src="/images/banner-img.png"
+            src="/images/banner-img.svg"
             className="banner_img"
             alt="bannerimg"
           />
@@ -363,7 +368,7 @@ export default function Home() {
               <h1 className="what_taital">Our Products</h1>
               <div className="col-lg-12" data-trigger>
                 <div className="s_r_block row pt-1 ">
-                  <div className="col-sm-12 col-md-4 mb-3 block_point blockprods">
+                  <div className="col-sm-12 col-md-4 mb-3 block_point blockprods" onClick={gotoform}>
                     <div
                       className="d-flex flex-lg-row flex-flow justify-content-center boxproducts"
                       data-trigger
@@ -381,7 +386,7 @@ export default function Home() {
                       stability.
                     </p>
                   </div>
-                  <div className="col-sm-12 col-md-4 mb-3 block_point blockprods">
+                  <div className="col-sm-12 col-md-4 mb-3 block_point blockprods" onClick={gotoform}>
                     <div
                       className="d-flex flex-lg-row flex-flow justify-content-center boxproducts"
                       data-trigger
@@ -401,7 +406,7 @@ export default function Home() {
                       diversify your portfolio.
                     </p>
                   </div>
-                  <div className="col-sm-12 col-md-4 mb-3 block_point blockprods">
+                  <div className="col-sm-12 col-md-4 mb-3 block_point blockprods" onClick={gotoform}>
                     <div
                       className="d-flex flex-lg-row flex-flow justify-content-center boxproducts"
                       data-trigger
@@ -421,7 +426,7 @@ export default function Home() {
                       ensuring a balanced and profitable portfolio.
                     </p>
                   </div>
-                  <div className="col-sm-12 col-md-4 mb-3 block_point blockprods">
+                  <div className="col-sm-12 col-md-4 mb-3 block_point blockprods" onClick={gotoform}>
                     <div
                       className="d-flex flex-lg-row flex-flow justify-content-center boxproducts"
                       data-trigger
@@ -441,7 +446,7 @@ export default function Home() {
                       business, home, education, car, mortgage loans etc.
                     </p>
                   </div>
-                  <div className="col-sm-12 col-md-4 mb-3 block_point blockprods">
+                  <div className="col-sm-12 col-md-4 mb-3 block_point blockprods" onClick={gotoform} >
                     <div
                       className="d-flex flex-lg-row flex-flow justify-content-center boxproducts"
                       data-trigger
@@ -462,7 +467,7 @@ export default function Home() {
                       and loved ones, offering peace of mind and security.
                     </p>
                   </div>
-                  <div className="col-sm-12 col-md-4 mb-3 block_point blockprods">
+                  <div className="col-sm-12 col-md-4 mb-3 block_point blockprods" onClick={gotoform}>
                     <div
                       className="d-flex flex-lg-row flex-flow justify-content-center boxproducts"
                       data-trigger
@@ -491,10 +496,75 @@ export default function Home() {
           </div>
         </div>
       </div>
-            
+            <div className="what_we_do_section">
+            <section ref={inforef}>
+              <div
+                  className="container p-1 "
+                  style={{ backgroundColor: "#170B3B" }}
+                  id="callback_form"
+                >
+                  <div className="text-center mb-1">
+                    <h4 className="text-white">Get a Call Back</h4>
+                    <p className="text-white-50">
+                      Fill out the form below and get a call back
+                    </p>
+                  </div>
+
+                  <form method="" name="">
+                    <div className="row ">
+                      <div className="col-xl-3 col-md-6 p-2">
+                        <input
+                          name="Name"
+                          type="text"
+                          required
+                          placeholder="Full Name"
+                          className="form-control"
+                        />
+                      </div>
+                      <div className="col-xl-3 col-md-6 p-2">
+                        <input
+                          name="Email"
+                          type="email"
+                          required
+                          placeholder="Email Address"
+                          className="form-control"
+                        />
+                      </div>
+                      <div className="col-xl-3 col-md-6 p-2">
+                        <input
+                          name="Mobile"
+                          type="tel"
+                          required
+                          placeholder="Mobile No."
+                          className="form-control"
+                        />
+                      </div>
+                      <div className="col-xl-3 col-md-6 p-2">
+                        <input
+                          name="Message"
+                          type="text"
+                          required
+                          placeholder="Message"
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div className="text-center mt-2 ">
+                      <button
+                        type="submit"
+                        name="Submit"
+                        className="btn btn-primary btn-md"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+            </section>
+            </div>
       {/* Client Section*/}
 
-      <div classNameName="client_section layout_padding" id="clientsection">
+      <div className="client_section layout_padding" id="clientsection">
         <div className="container">
           
           <div
@@ -519,68 +589,7 @@ export default function Home() {
             </ol>
             <div className="carousel-inner mt-5">
               <div className="carousel-item active">
-                <div
-                  className="container p-1 "
-                  style={{ backgroundColor: "#170B3B" }}
-                  id="callback_form"
-                >
-                  <div className="text-center mb-1">
-                    <h4 className="text-white">Get a Call Back</h4>
-                    <p className="text-white-50">
-                      Fill out the form below and get a call back
-                    </p>
-                  </div>
-
-                  <form method="" name="">
-                    <div className="row ">
-                      <div className="col-xl-3 col-md-6">
-                        <input
-                          name="Name"
-                          type="text"
-                          required
-                          placeholder="Full Name"
-                          className="form-control"
-                        />
-                      </div>
-                      <div className="col-xl-3 col-md-6">
-                        <input
-                          name="Email"
-                          type="email"
-                          required
-                          placeholder="Email Address"
-                          className="form-control"
-                        />
-                      </div>
-                      <div className="col-xl-3 col-md-6">
-                        <input
-                          name="Mobile"
-                          type="tel"
-                          required
-                          placeholder="Mobile No."
-                          className="form-control"
-                        />
-                      </div>
-                      <div className="col-xl-3 col-md-6 ">
-                        <input
-                          name="Message"
-                          type="text"
-                          required
-                          placeholder="Message"
-                          className="form-control"
-                        />
-                      </div>
-                    </div>
-                    <div className="text-center mt-2 ">
-                      <button
-                        type="submit"
-                        name="Submit"
-                        className="btn btn-primary btn-md"
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  </form>
-                </div>
+                
                 <h1 className="what_taital mt-2">what Our Client Says</h1>
                 <div className="client_section_2 layout_padding">
                   <ul>
@@ -593,7 +602,7 @@ export default function Home() {
                     </li>
                     <li>
                       <img
-                        src="/images/img-11.png"
+                        src="/images/malecarousel.png"
                         className="image_11"
                         alt="images"
                       />
@@ -606,10 +615,9 @@ export default function Home() {
                       />
                     </li>
                   </ul>
+                  <h4>Mr. Shyam</h4>
                   <p className="dummy_text">
-                    Overall, Profitology provides a comprehensive, reliable, and
-                    innovative solution for anyone serious about maximizing
-                    their trading potential. Highly recommended!
+                      Profitology’s team is top-notch. They provided clear, actionable advice that’s helped our grow our wealth significantly.
                   </p>
                 </div>
               </div>
@@ -626,7 +634,7 @@ export default function Home() {
                     </li>
                     <li>
                       <img
-                        src="/images/img-11.png"
+                        src="/images/femalecarousel.png"
                         className="image_11"
                         alt="images"
                       />
@@ -639,10 +647,9 @@ export default function Home() {
                       />
                     </li>
                   </ul>
+                  <h4>Prachi</h4>
                   <p className="dummy_text">
-                    Overall, Profitology provides a comprehensive, reliable, and
-                    innovative solution for anyone serious about maximizing
-                    their trading potential. Highly recommended!
+                      Profitology turned my financial goals into reality. Their guidance is always spot-on and tailored to my unique needs
                   </p>
                 </div>
               </div>
@@ -659,7 +666,7 @@ export default function Home() {
                     </li>
                     <li>
                       <img
-                        src="/images/img-11.png"
+                        src="/images/malecarousel.png"
                         className="image_11"
                         alt="images"
                       />
@@ -672,10 +679,9 @@ export default function Home() {
                       />
                     </li>
                   </ul>
+                  <h4>Neeraj</h4>
                   <p className="dummy_text">
-                    Overall, Profitology provides a comprehensive, reliable, and
-                    innovative solution for anyone serious about maximizing
-                    their trading potential. Highly recommended!
+                  I’ve never felt more confident in my financial decisions since partnering with Profitology. They truly care about their clients’ success.
                   </p>
                 </div>
               </div>

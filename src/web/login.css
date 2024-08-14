@@ -66,9 +66,10 @@
 
 
 #commonform {
-  height:100%;
+  height:max-content;
   background: linear-gradient(to bottom,rgb(229,104,7),rgb(106,8,158));
   position: relative;
+  padding-bottom: 10px;
   }
 
 
@@ -87,5 +88,35 @@
   }
 
 
+  .formbtn {
+    border: calc(0.05 * var(--m)) solid transparent;
+    border-top: none;
+    position: relative;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 16px;
+    border-radius: calc(0.7 * var(--m));
+    font-weight: 400;
+    font-family: "Segoe UI Regular";
+    background:linear-gradient(#060504f2, #000000), linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(17, 17, 233, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-size: 200%;
+    animation: animate 2s infinite linear;
+}
 
+    .formbtn:hover, .formbtn:hover::before{
+    animation: pop 1.5s infinite linear;
+    font-weight: 400;
+  }
+
+  @keyframes pop {
+    0% {background-position: 0}
+    100% {background-position: 200%}
+  }
+  @media screen and (max-width: 1000px) {
+    :root {
+      --m: 2rem;
+    }
+  }
 

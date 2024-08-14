@@ -11,45 +11,86 @@ export default function Contact() {
       {/* Header Section */}
       <div className="header_section">
                 <NavBar />                
-            <div className="header_left">
-            </div>
+            
         </div>
-      <div className="contact_section ">
+      <div className="contact_section mt-3">
         <div className="container-fluid">
           <h1 className="what_taital">Contact us</h1>
           <div className="contact_section2">
             <div className="row">
               <div className="col-md-6 padding_left_0">
-                <div className="mail_section">
-                  <input
-                    type=""
-                    className="mail_text_1"
-                    placeholder="Name"
-                    name="Name"
-                  />
-                  <input
-                    type=""
-                    className="mail_text_1"
-                    placeholder="Phone Number"
-                    name="Phone Number"
-                  />
-                  <input
-                    type=""
-                    className="mail_text_1"
-                    placeholder="Email"
-                    name="Email"
-                  />
-                  <textarea
-                    className="massage_text"
-                    placeholder="Message"
-                    rows="5"
-                    id="comment"
-                    name="Message"
-                  ></textarea>
-                  <div className="send_bt">
-                    <Link href="#">send</Link>
+              <section>
+              <div
+                  className="container p-1 "
+                  style={{ backgroundColor: "rgb(106,8,158)" }}
+                  id="callback_form"
+                >
+                  <div className="text-center mb-1">
+                    <h4 className="text-white">Get a Call Back</h4>
+                    <p className="text-white-50">
+                      Fill out the form below and get a call back
+                    </p>
                   </div>
+
+                  <form method="" name="" className="text-center">
+                    <div className="col-xl-12 col-lg-6 col-md-3 text-center">
+                    <div className="row p-2 justify-content-center">
+                      <div className="col-xl-10 col-lg-12">
+                        <input
+                          name="Name"
+                          type="text"
+                          required
+                          placeholder="Full Name"
+                          className="form-control"
+                        />
+                      </div>
+                      </div>
+                      <div className="row p-2 justify-content-center">
+                      <div className="col-xl-10 col-lg-12">
+                        <input
+                          name="Email"
+                          type="email"
+                          required
+                          placeholder="Email Address"
+                          className="form-control"
+                        />
+                      </div>
+                      </div>
+                      <div className="row p-2 justify-content-center">
+                      <div className="col-xl-10 col-lg-12">
+                        <input
+                          name="Mobile"
+                          type="tel"
+                          required
+                          placeholder="Mobile No."
+                          className="form-control"
+                        />
+                      </div>
+                      </div>
+                      <div className="row p-2 justify-content-center">
+                      <div className="col-xl-10 col-lg-12">
+                        <input
+                          name="Message"
+                          type="text"
+                          required
+                          placeholder="Message"
+                          className="form-control"
+                        />
+                      </div>
+                      </div>
+                      </div>
+                    <div className="text-center mt-2 ">
+                      <button
+                        type="submit"
+                        name="Submit"
+                        className="btn btn-primary btn-md"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </form>
                 </div>
+            </section>
               </div>
               <div className="col-md-6 padding_0">
                 <div className="map-responsive">

@@ -44,14 +44,14 @@ const Header=({sectionRef})=>{
                 <Link className="nav-link" to="/contact">Contact</Link>
               </li>
               <li className="nav-item ">
-                <div className="nav_btn_animate">
-                <Link className="nav-link" id="login-link-btn" to="/user/login">Login</Link>
-                </div>
+                <Link to={"/user/login"} className="nav_btn_animate">
+                <span className="nav-link" id="login-link-btn" to="/user/login">Login</span>
+                </Link>
               </li>
               <li className="nav-item ">
-                <div className="nav_btn_animate">
+                <Link className="nav_btn_animate">
                 <a href="https://cutt.ly/VezcJoaa" target="_blank" className="nav-link" id="demat-link-btn" to="">Open Demat</a>
-                </div>
+                </Link>
               </li>
             </ul>
           </div>

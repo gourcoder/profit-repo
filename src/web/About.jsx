@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 // import TopBar from "./TopBar";
 import Social from "./Social";
+import { useEffect } from "react";
 
 export default function About() {
+  useEffect(()=>{
+    window.scrollTo({top:0,behaviour:"smooth"})
+  },[])
   return (
     <>
       {/* Top Bar */}

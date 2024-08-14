@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import NavBar from './NavBar';
-import Popup from './Popup';
+import Popup from './PricingPop';
 // import TopBar from './TopBar';
 import Social from './Social';
 import { useNavigate } from 'react-router-dom';

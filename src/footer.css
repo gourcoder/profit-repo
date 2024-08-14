@@ -8,14 +8,14 @@ footer .container .row h5 {
 }
 
 footer .container .row a {
-  color: #ffffff;
+  color: #000000;
   font-weight: 500;
   text-decoration: none;
   background-color: transparent;
 }
 
 footer .container .row  a:hover {
-  color: #45cafb;
+  color: #00749f;
   text-decoration: none;
 }
 
@@ -33,7 +33,5 @@ footer .container .row .foot_logo{
   margin-top: 0px;
   width: 100%;
   min-width:150px ;
-  max-width: 300px;
-  mix-blend-mode: luminosity;
-  
+  max-width: 300px;  
 }

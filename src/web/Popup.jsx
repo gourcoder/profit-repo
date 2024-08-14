@@ -11,8 +11,8 @@ const Popup = ({ onClose }) => {
       <Confetti
         width={width}
         height={height}
-        numberOfPieces={150}
-        gravity={0.2}
+        numberOfPieces={100}
+        gravity={0.3}
         colors={['#ff0', '#f0f', '#0ff', '#0f0', '#00f']}
       />
       <div id="inner_box" style={styles.popup}>

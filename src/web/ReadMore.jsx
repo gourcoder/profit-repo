@@ -3,22 +3,15 @@
 import Social from './Social';
 
 import NavBar from './NavBar';
-export default function Read() {
+import { FaWindowClose } from 'react-icons/fa';
+export default function Read({setRead}) {
   return <>
-    {/* Top Bar */}
-    {/* <TopBar /> */}
-    {/* Header Section */}
-    <div className="header_section">
-        <NavBar/>
-      <div className="header_left">
-      </div>
-    </div>
-    <div className="services_section layout_padding">
-      <div className="container">
-        <div className="row justify-content-center">
-          <h1 className="services_taital">Content</h1>
-          <div className="col-xl-10 col-lg-12 col-md-9 ">
-            <div className="card o-hidden border-0 shadow-lg ">
+    <div style={styles.overlay}>
+      <div className='container'>
+        <div className="row justify-content-center bg-transparent p-3" style={{position:"relative"}}>
+          <div className="col-xl-10 col-lg-12 col-md-9">
+          <FaWindowClose onClick={()=>setRead(false)} style={{fontSize:"30px",position:"absolute",top:"0px",right:"-3%",zIndex:"3",cursor:"pointer",color:"white"}}/>
+            <div className="card o-hidden border-0 shadow-lg">
               <p>
               Profitology ,provide AI based technology for support automate
               trading, execute numbers of orders although within properly
@@ -37,8 +30,57 @@ export default function Read() {
             </div>
           </div>
         </div>
-      </div>
-      <Social/>
+        </div>
     </div>
+    
   </>
 }
+const styles = {
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 10,
+    padding: '10px', 
+  },
+  popup: {
+    width: '90%',
+    maxWidth: '400px', 
+    backgroundColor: 'white',
+    padding: '20px',
+    borderRadius: '10px',
+    textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '4vw', 
+    textTransform: 'uppercase',
+    position:"relative"
+  },
+  logo: {
+    height: '30vw', 
+    maxHeight: '200px',
+    mixBlendMode: 'color-burn',
+  },
+  button: {
+    margin:'0px',
+    padding: '0px',
+    color: 'black',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    fontSize: '2vw', 
+    maxWidth: '100px', 
+    position:"absolute",
+    right:"10px",
+    top:"10px",
+    background:"transparent"
+  },
+};

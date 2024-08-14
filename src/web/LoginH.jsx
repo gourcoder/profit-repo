@@ -58,12 +58,9 @@ export function Register() {
         
         id="reg_form"
       >
-        <div className="text-center mb-1">
-          <h4 className="text-white">Register</h4>
-        </div>
 
-        <form method="" onSubmit={register} name="">
-        <div className="row justify-content-center p-2">
+        <form method="" onSubmit={register} name="" >
+        <div className="row justify-content-center p-2 mt-4">
             <div className="col-lg-10 col-md-5">
               <input
                 name="name"
@@ -113,7 +110,7 @@ export function Register() {
               name="Submit"
               className="btn btn-primary btn-md formbtn"
             >
-              Submit
+              Register
             </button>
           </div>
         </form>
@@ -162,17 +159,14 @@ export function Login() {
   return (
     <>
       <div
-        className="container p-1 "
+        className="container p-1"
         id="login_form"
         
       >
-        <div className="text-center mb-1">
-          <h4 className="text-white">Login</h4>
-        </div>
 
         <form method="" onSubmit={login} name="">
-          <div className="row justify-content-center p-2">
-            <div className="col-lg-10 col-md-5">
+          <div className="row justify-content-center p-2 mt-5">
+            <div className="col-lg-10 col-md-5 ">
               <input
                 name="Email"
                 type="email"
@@ -220,7 +214,7 @@ export function RegLoginCommon() {
     useEffect(()=>{
       if(showForm){
         checkboxLabel.current.style.backgroundColor="lightgreen"
-        txtlog.current.style.boxShadow="0px 0px 20px 3px white"
+        txtlog.current.style.boxShadow="0px 0px 10px 1px white"
         txtreg.current.style.boxShadow="none"
         txtlog.current.style.padding="6px"
         txtreg.current.style.padding="0px"
@@ -228,12 +222,11 @@ export function RegLoginCommon() {
         txtreg.current.style.color="black"
          txtlog.current.style.backgroundColor="black"
         txtlog.current.style.color="white"
-
       }
       else{
         txtlog.current.style.boxShadow="none"
         checkboxLabel.current.style.backgroundColor="skyblue"
-        txtreg.current.style.boxShadow="0px 0px 20px 3px white"
+        txtreg.current.style.boxShadow="0px 0px 10px 1px white"
         txtreg.current.style.padding="6px"
         txtreg.current.style.backgroundColor="black"
         txtreg.current.style.color="white"
