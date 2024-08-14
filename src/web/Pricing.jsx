@@ -1,12 +1,22 @@
+import { useEffect, useState } from 'react';
 import NavBar from './NavBar';
+import Popup from './Popup';
 // import TopBar from './TopBar';
 import Social from './Social';
+import { useNavigate } from 'react-router-dom';
 
 export default function Pricing() {
+  const [showPopup, setShowPopup] = useState(false);
+  const navigate=useNavigate(null)
+  useEffect(()=>{
+    setShowPopup(true)
+  },[])
+  const closePopup = () => {
+    setShowPopup(false);
+    navigate("/")
+  };
     return <>
-        {/* Top Bar */}
-        {/* <TopBar/> */}
-        {/* Header Section */}
+        {showPopup && <Popup onClose={closePopup}/>}
         <div className="header_section">
                 <NavBar />                
             <div className="header_left">

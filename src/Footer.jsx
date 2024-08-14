@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import "./footer.css"
-import { FaArrowAltCircleRight, FaFacebook,FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
+import { FaArrowAltCircleUP, FaFacebook,FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 
 export default function Footer() {
   return (
     <>
       <footer>
         <div className="container pt-3 border-bottom">
-          <div className="row">
+          <div className="row justify-content-between">
             <div className="col-md-3 col-sm-12 mb-3 text-center">
-                <img className="foot_logo" src="./images/logo.png" alt="" />
+                <img  src={"/images/logo.svg"} alt="" className="foot_logo"/>
             </div>
             <div className="col-md-9 col-sm-12 footer_keys" >
               <div className="col-md-3 col-sm-6 col-6 p-0 float-left mb-3">
@@ -40,12 +40,12 @@ export default function Footer() {
              
               <div className="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
                 <h5 className="mb-4 font-weight-bold text-uppercase">
-                  Connect
+                  CONNECT
                 </h5>
                 <ul className="list-group">
                   <li className="list-group-item bg-transparent border-0 p-0 mb-2">
                     <a
-                      href=""
+                      href="https://www.facebook.com/profile.php?id=61551056345056&mibextid=ZbWKwL"
                       target="_blank"
                     >
                       <FaFacebook/> Facebook
@@ -53,7 +53,7 @@ export default function Footer() {
                   </li>
                   <li className="list-group-item bg-transparent border-0 p-0 mb-2">
                     <a
-                      href=""
+                      href="https://youtube.com/@theprofitology?si=w0YA7qZOc_m-y0a2"
                       target="_blank"
                     >
                       <FaYoutube/> YouTube
@@ -61,7 +61,7 @@ export default function Footer() {
                   </li>
                   <li className="list-group-item bg-transparent border-0 p-0 mb-2">
                     <a
-                      href=""
+                      href="https://www.instagram.com/profitologywebeliveinprofit?igsh=emxlaTl1ZjVlYnMz"
                       target="_blank"
                     >
                       <FaInstagram/> Instagram
@@ -69,11 +69,30 @@ export default function Footer() {
                   </li>
                   <li className="list-group-item bg-transparent border-0 p-0 mb-2">
                     <a
-                      href=""
+                      href="https://wa.me/919664143801"
                       target="_blank"
                     >
                       <FaWhatsapp/> Whatsapp
                     </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
+                <h5 className="mb-4 font-weight-bold text-uppercase">
+                  CONTACT
+                </h5>
+                <ul className="list-group">
+                  <li className="list-group-item bg-transparent border-0 p-0 mb-2">
+
+                  </li>
+                  <li className="list-group-item bg-transparent border-0 p-0 mb-2">
+                  
+                  </li>
+                  <li className="list-group-item bg-transparent border-0 p-0 mb-2">
+
+                  </li>
+                  <li className="list-group-item bg-transparent border-0 p-0 mb-2">
+             
                   </li>
                 </ul>
               </div>

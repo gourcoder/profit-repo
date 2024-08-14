@@ -6,7 +6,7 @@ import Social from "./Social";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
-import { FaChartLine, FaRupeeSign, FaUser, FaUserTie } from "react-icons/fa";
+import { FaChartLine, FaGlobe, FaLightbulb, FaRupeeSign, FaTradeFederation, FaUser, FaUserTie } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,7 +23,7 @@ export default function Home() {
       {
         opacity: 1,
         y: 0,
-        ease: "power1.out",
+        ease:"power1.out",
         scrollTrigger: {
           trigger: "[data-trigger]",
           start: "top 80%",
@@ -41,11 +41,11 @@ export default function Home() {
         opacity: 1,
         duration: 2,
         y: 0,
-        ease: "easeIn",
+        ease:"power1.out",
         scrollTrigger: {
           trigger: ".box_main",
           start: "top 70%",
-          end: "top 10%",
+          end: "top 40%",
           scrub: true,
           // markers: true,
         },
@@ -59,11 +59,11 @@ export default function Home() {
         opacity: 1,
         duration: 2,
         y: 0,
-        ease: "easeIn",
+        ease:"power1.out",
         scrollTrigger: {
           trigger: ".blockprods",
           start: "top 70%",
-          end: "top 10%",
+          end: "top 40%",
           scrub: true,
           // markers: true,
         },
@@ -123,11 +123,11 @@ export default function Home() {
         </div>
       </div>
       {/* simply connect */}
-      <div className="container pb-5" id="pro">
-        <div className="row cnt_trd_algo">
+      <div className="container" id="pro">
+        <div className="row cnt_trd_algo" style={{paddingTop:"30px"}}>
+          
           <div
             className="col-lg-5"
-            style={{ paddingTop: "3rem", paddingBottom: "3rem" }}
           >
             <div className="s_l_block" data-trigger>
               <h2
@@ -148,7 +148,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-lg-7" data-trigger>
-            <div className="s_r_block row pt-5 ">
+            <div className="s_r_block row p-0">
               <div className="col-sm-12 col-md-6 mb-3 block_point ">
                 <div
                   className="d-flex flex-lg-row flex-flow justify-content-center"
@@ -227,10 +227,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="s_r_block row pt-5 "></div>
           </div>
           <div className="col-lg-12" data-trigger>
-            <div className="s_r_block row pt-5 ">
+            <div className="s_r_block row p-0 ">
               <div className="col-sm-12 col-md-4 mb-3 block_point ">
                 <div
                   className="d-flex flex-lg-row flex-flow justify-content-center"
@@ -275,8 +274,8 @@ export default function Home() {
                   strategies.
                 </p>
               </div>
-              <div className="col-sm-12 col-md-4 mb-3 block_point ">
-                <img src="images/bars.png" alt="" />
+              <div className="col-sm-12 col-md-4 mb-3 block_point" >
+                <img src="images/bars.png" className="bars" alt="" />
               </div>
             </div>
           </div>
@@ -290,89 +289,67 @@ export default function Home() {
           <p className="what_text">Easy Steps to take a trade ....</p>
           <div className="what_we_do_section_2">
             <div className="row">
-              <div className="col-lg-3 col-sm-6" service-trigger>
+            <div className="col-lg-1 col-sm-2" service-trigger></div>
+              <div className="col-lg-2 col-sm-4" service-trigger>
                 <div className="box_main">
-                  <div className="icon_1" style={{ fontSize: "50px" }}>
-                    <FaUser />
+                  <div className="icon_1" >
+                    <FaUser className="fa_track"/>
                   </div>
                   <h3 className="accounting_text">Register</h3>
                   <p className="lorem_text">Register with Profitology </p>
                   <div className="moremore_bt_1">
-                    <ul>
-                      <li>
-                        Join Profitology and elevate your trading with
-                        cutting-edge algorithms.
-                      </li>
-                      <li>
-                        Register now to automate your trades and maximize your
-                        profits effortlessly.
-                      </li>
-                    </ul>
+                    
                   </div>
                 </div>
               </div>
 
-              <div className="col-lg-3 col-sm-6" service-trigger>
+              <div className="col-lg-2 col-sm-4" service-trigger>
                 <div className="box_main">
-                  <div className="icon_1" style={{ fontSize: "50px" }}>
-                    <FaRupeeSign />
+                  <div className="icon_1" >
+                    <FaRupeeSign className="fa_track"/>
                   </div>
-                  <h3 className="accounting_text">Take Subscription</h3>
+                  <h3 className="accounting_text">Subscription</h3>
                   <p className="lorem_text">Choose Subscription Plan</p>
                   <div className="moremore_bt_1">
-                    <ul>
-                      <li>
-                        Select the perfect subscription plan tailored to your
-                        needs.
-                      </li>
-                      <li>
-                        Choose your plan and unlock premium features today.
-                      </li>
-                    </ul>
+                    
                   </div>
                 </div>
               </div>
 
-              <div className="col-lg-3 col-sm-6" service-trigger>
+              <div className="col-lg-2 col-sm-4" service-trigger>
                 <div className="box_main">
-                  <div className="icon_1" style={{ fontSize: "50px" }}>
-                    <FaUserTie />
+                  <div className="icon_1" >
+                    <FaUserTie className="fa_track"/>
                   </div>
                   <h3 className="accounting_text">Brokers</h3>
                   <p className="lorem_text">Add Your Broker</p>
                   <div className="moremore_bt_1">
-                    <ul>
-                      <li>
-                        Connect your broker to Profitology and start trading
-                        smarter today.
-                      </li>
-                      <li>
-                        Add your broker now to seamlessly integrate and optimize
-                        your trading experience.
-                      </li>
-                    </ul>
+                    
                   </div>
                 </div>
               </div>
 
-              <div className="col-lg-3 col-sm-6" service-trigger>
+              <div className="col-lg-2 col-sm-4" service-trigger>
                 <div className="box_main">
-                  <div className="icon_1" style={{ fontSize: "50px" }}>
-                    <FaChartLine />
+                  <div className="icon_1" >
+                    <FaChartLine className="fa_track"/>
                   </div>
-                  <h3 className="accounting_text">Select Strategies</h3>
+                  <h3 className="accounting_text">Strategies</h3>
                   <p className="lorem_text">Choose Strategies </p>
                   <div className="moremore_bt_1 ">
-                    <ul>
-                      <li>
-                        Choose the best trading strategies that align with your
-                        goals.
-                      </li>
-                      <li>
-                        Select your strategies and take control of your trading
-                        journey.
-                      </li>
-                    </ul>
+                    
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-2 col-sm-4" service-trigger>
+                <div className="box_main">
+                  <div className="icon_1" >
+                    <FaGlobe icon="fa-solid fa-lightbulb" className="fa_track" />
+                  </div>
+                  <h3 className="accounting_text">Start Trading</h3>
+                  <p className="lorem_text">  Get Started </p>
+                  <div className="moremore_bt_1 ">
+                    
                   </div>
                 </div>
               </div>
@@ -543,10 +520,11 @@ export default function Home() {
             <div className="carousel-inner mt-5">
               <div className="carousel-item active">
                 <div
-                  className="container p-5 "
+                  className="container p-1 "
                   style={{ backgroundColor: "#170B3B" }}
+                  id="callback_form"
                 >
-                  <div className="text-center mb-4">
+                  <div className="text-center mb-1">
                     <h4 className="text-white">Get a Call Back</h4>
                     <p className="text-white-50">
                       Fill out the form below and get a call back
@@ -554,7 +532,7 @@ export default function Home() {
                   </div>
 
                   <form method="" name="">
-                    <div className="row g-3">
+                    <div className="row ">
                       <div className="col-xl-3 col-md-6">
                         <input
                           name="Name"
@@ -582,7 +560,7 @@ export default function Home() {
                           className="form-control"
                         />
                       </div>
-                      <div className="col-xl-3 col-md-6">
+                      <div className="col-xl-3 col-md-6 ">
                         <input
                           name="Message"
                           type="text"
@@ -592,18 +570,18 @@ export default function Home() {
                         />
                       </div>
                     </div>
-                    <div className="text-center mt-4">
+                    <div className="text-center mt-2 ">
                       <button
                         type="submit"
                         name="Submit"
-                        className="btn btn-primary btn-lg"
+                        className="btn btn-primary btn-md"
                       >
                         Submit
                       </button>
                     </div>
                   </form>
                 </div>
-                <h1 className="what_taital">what Our Client Says</h1>
+                <h1 className="what_taital mt-2">what Our Client Says</h1>
                 <div className="client_section_2 layout_padding">
                   <ul>
                     <li>

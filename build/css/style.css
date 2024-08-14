@@ -252,11 +252,7 @@ button {
      width: 100%;
 }
 
-.layout_padding {
-     padding-top: 10px;
-     padding-bottom: 10px;
-     /* mix-blend-mode: difference; */
-}
+
 .padding_0{
     padding: 0px;
 }
@@ -414,15 +410,9 @@ button {
     width: 100% ;
     float: left ;
     height: auto ;
-    padding-bottom: 10px ;
-    background-size: 100% ;
-    padding-top: 10px;
 }
-.cnt_trd_algo{
-    margin-top: 10px;
-    box-shadow: 0px 30px 100px 5px grey;
-    border-radius: 40px 40px 0px 0px;
-}
+
+
 
 .services_taital {
     width: 100%;
@@ -465,7 +455,7 @@ button {
     text-transform: uppercase;
 }
 .moremore_bt {
-    width: 170px;
+    width: 10px;
     float: left;
     margin-top: 30px;
     position: relative;
@@ -506,7 +496,7 @@ button {
 
 .what_we_do_section{
     padding-top:0px;
-    padding-bottom:40px;
+    padding-bottom:10px;
     width: 100% ;
     float: left ;
 }
@@ -551,29 +541,31 @@ button {
 .what_we_do_section_2{
     width: 100%;
     float: left;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .box_main {
     width: 100%;
     float: left;
     border-radius: 20px;
-    padding: 50px 0px;
+    padding: 0px;
     background:linear-gradient(to bottom,rgb(229,104,7),rgb(106,8,158));
     box-shadow: 0px 20px 50px 1px rgb(118, 118, 121);
+    padding: 1px;
+    min-height: 200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.box_main:hover{
-    mix-blend-mode: darken;
-}
-.box_main.active {
-    background-color: #ff5a58;
-}
+
 .icon_1 {
     width: 100%;
     float: left;
     text-align: center;
-    min-height: 70px;
+    min-height: 50px;
     color:rgb(205, 205, 2);
+    padding: 10px;
 }
 .accounting_text{
     width: 100%;
@@ -594,26 +586,31 @@ button {
     margin-left: 0px;
     font-family: "Segoe UI Regular";
 }
-.moremore_bt_1 {
-    width: 170px;
-    margin: 0 auto;
-    text-align: left;
-    margin-top: 30px;
-    font-weight: 500;
-    font-family: "Segoe UI Regular";
+.upper_box_main{
+    height: 50%;
 }
 
-.moremore_bt_1{
-    width: 100%;
-    float: left;
-    font-size: 11px;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 10px;
-  
+
+.moremore_bt_1 {
+    width: 170px;
+    text-align: left;
+    margin-top: 1px;
+    font-weight: 500;
+    font-family: "Segoe UI Regular";
+    color: rgb(255, 255, 255);
+    
 }
+#callback_form{
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+
 .moremore_bt_1 :hover {
     color: #ffffff;
+}
+.fa_track
+{
+    font-size: 30px;
 }
 .project_section{
     width: 100%;
@@ -621,13 +618,17 @@ button {
     padding-bottom: 90px;
 }
 .our_products{
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 .block_point{
-    /* margin: 1px; */
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: red; */
 }
+
+
+
 
 .boxproducts{
     background: rgb(82, 4, 177);
@@ -917,10 +918,10 @@ button {
     border-radius: 30px;
 }
 
-.footer_section{
+.footer_section {
     width: 100%;
     float: left;
-    background-color: #000000;
+    background-color: #240548;
     height: auto;
     padding-top: 0px;
 }

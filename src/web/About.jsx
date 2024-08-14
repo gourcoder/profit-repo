@@ -13,7 +13,7 @@ export default function About() {
         <NavBar />
         <div className="header_left"></div>
       </div>
-      <div className="services_section layout_padding mt-5">
+      <div className="services_section layout_padding mt-2">
         <div className="container">
           <div className="row">
             <div className="col-md-8">
@@ -28,7 +28,7 @@ export default function About() {
                 trading,loan facilitation, insurance planning, mutual fund
                 investments and stock market training program in india.
               </p>
-              <h1 className="services_taital mt-5">
+              <h1 className="services_taital mt-2">
                 Our Commitment to Technology and Algorithms Trading.
               </h1>
               <p className="services_text">
@@ -47,7 +47,7 @@ export default function About() {
                 financial goals and risk tolerance, optimizing your investment
                 strategy for maximum returns.
               </p>
-              <h1 className="services_taital mt-3">OUR SERVICES </h1>
+              <h1 className="services_taital mt-2">OUR SERVICES </h1>
               <ul className="unordered-list">
                 <li className="p-2">
                   <span className="services_key_points"> Stock Market </span>
@@ -120,11 +120,8 @@ export default function About() {
                   </span>
                 </li>
               </ul>
-              <div className="more_bt  mt-3">
-                <Link to="/readmore">Read More </Link>
-              </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 mt-5">
               <div>
                 <img
                   src="images/img-1.png"

@@ -3,7 +3,7 @@ import Confetti from 'react-confetti';
 import { Fa500Px, FaClosedCaptioning, FaCross, FaWindowClose } from 'react-icons/fa';
 import { useWindowSize } from 'react-use';
 
-const Popup = ({ message, onClose }) => {
+const Popup = ({ onClose }) => {
   const { width, height } = useWindowSize();
   
   return (
@@ -63,7 +63,6 @@ const styles = {
     mixBlendMode: 'color-burn',
   },
   button: {
-    background:"transparent",
     margin:'0px',
     padding: '0px',
     color: 'black',
@@ -74,7 +73,8 @@ const styles = {
     maxWidth: '100px', 
     position:"absolute",
     right:"10px",
-    top:"10px"
+    top:"10px",
+    background:"transparent"
   },
 };
 

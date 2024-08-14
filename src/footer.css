@@ -4,7 +4,7 @@ footer .container .row h5 {
     line-height: 1.375;
   font-family: "Segoe UI Regular";
     font-weight: 500;
-    color: #ff8400;
+    color: #f9b46a;
 }
 
 footer .container .row a {
@@ -15,23 +15,25 @@ footer .container .row a {
 }
 
 footer .container .row  a:hover {
-  color: #00bbff;
+  color: #45cafb;
   text-decoration: none;
 }
 
 footer {
-  background: #000000;
+  background: transparent;
 }
 .footer_keys{
-  padding-left: 150px;
+  /* padding-left: 150px; */
   display: flex;
-  justify-content: start;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 footer .container .row .foot_logo{
-  margin-top: 30px;
+  margin-top: 0px;
   width: 100%;
   min-width:150px ;
   max-width: 300px;
+  mix-blend-mode: luminosity;
+  
 }

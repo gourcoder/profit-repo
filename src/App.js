@@ -6,7 +6,7 @@ import Pricing from "./web/Pricing";
 import Contact from "./web/Contact";
 import ReadMore from "./web/ReadMore";
 import Policy from "./web/Policies";
-import { RegLoginCommon, Register, Login } from "./web/Login";
+// import { RegLoginCommon, Register, Login } from "./web/Login";
 import WrongUser from "./web/WrongUser";
 import WrongURL from "./web/WrongURL";
 import AdminMain from "./admin/AdminMain";
@@ -17,12 +17,12 @@ import { useEffect, useState } from "react";
 import Popup from "./web/Popup";
 import Confetti from 'react-confetti';
 import { useWindowSize } from 'react-use';
-
+import { RegLoginCommon, Register, Login } from "./web/LoginH";
 export default function App() {
   const [showPopup, setShowPopup] = useState(false);
   const { width, height } = useWindowSize();
   useEffect(() => {
-    // Trigger the popup when the component mounts
+ 
     setShowPopup(true);
   }, []);
 
@@ -32,7 +32,7 @@ export default function App() {
   return (
     <>
       {showPopup && <>
-        <Popup message="You've won a prize!" onClose={closePopup} />
+        <Popup onClose={closePopup} />
       </>}
       <Routes>
         <Route path="/" element={<Home />} />
