@@ -26,16 +26,13 @@ const Header=({sectionRef})=>{
                 <Link className="nav-link" to="/about">About</Link>
               </li>
               <li className="nav-item">
-              <div className="dropdown" >
-                    <button style={{background:"transparent",fontWeight:"600"}}
-                      dropdata-mdb-ripple-init data-mdb-dropdown-init
+                    <span style={{background:"transparent",fontWeight:"600"}}
                         className="nav-link"
                         id="dropdownMenuButton"
                         type="button"
                         data-mdb-toggle="dropdown" onClick={scrollTosection}>
                           products
-                      </button>
-                    </div>
+                      </span>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/pricing">Pricing</Link>
@@ -49,9 +46,9 @@ const Header=({sectionRef})=>{
                 </Link>
               </li>
               <li className="nav-item ">
-                <Link className="nav_btn_animate">
+                <span className="nav_btn_animate">
                 <a href="https://cutt.ly/VezcJoaa" target="_blank" className="nav-link" id="demat-link-btn" to="">Open Demat</a>
-                </Link>
+                </span>
               </li>
             </ul>
           </div>

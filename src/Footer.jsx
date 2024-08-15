@@ -18,10 +18,10 @@ export default function Footer() {
                 </h5>
                 <ul className="list-group">
                   <li className="list-group-item text-danger bg-transparent border-0 p-0 mb-2">
-                    <Link to={"/about"}> About Us</Link>
+                    <Link to={"/about"} onClick={()=>window.scrollTo({top:0,behavior:"smooth"})}> About Us</Link>
                   </li>
                   <li className="list-group-item bg-transparent border-0 p-0 mb-2">
-                    <Link to={"/policy"}>Privacy / Policies</Link>
+                    <Link to={"/policy"} onClick={()=>window.scrollTo({top:0,behavior:"smooth"})}>Privacy / Policies</Link>
                   </li>
                 </ul>
               </div>

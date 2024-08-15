@@ -15,10 +15,11 @@ export default function Home() {
   const sectionRef = useRef(null);
   const location = useLocation();
   const inforef=useRef(null);
-  useEffect(() => {
+  useEffect(() =>{
     if (location.state && location.state.scroll === sectionRef.current.id) {
       sectionRef.current.scrollIntoView({ behavior: "smooth" });
     }
+    
     gsap.fromTo(
       "[data-trigger]",
       { opacity: 0, y: 90 },
@@ -73,7 +74,6 @@ export default function Home() {
     );
   }, [location]);
   const gotoform=()=>{
-    alert(inforef.current)
     inforef.current.scrollIntoView({ behavior: "smooth" });  }
   return (
     <>
@@ -143,7 +143,7 @@ export default function Home() {
                 A Smarter Way To Trade <br /> With Profitology Algo <br /> Like
                 A Pro <br />
               </h2>
-              <div className="" data-trigger>
+              <div className=""  data-trigger>
                 <img
                   src="images/handshaking.png"
                   alt="Human and Robot are handshaking"
@@ -280,7 +280,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="col-sm-12 col-md-4 mb-3 block_point" >
-                <img src="images/bars.png" className="bars" alt="" />
+                <img src="images/bars.png" className="bars" alt=""  />
               </div>
             </div>
           </div>
@@ -288,14 +288,14 @@ export default function Home() {
       </div>
       {/* Service Section */}
 
-      <div className="what_we_do_section layout_padding pb-9" service-trigger>
+      <div className="what_we_do_section layout_padding pb-9"  >
         <div className="container">
           <h1 className="what_taital">How To Use Profitology Algo</h1>
           <p className="what_text">Easy Steps to take a trade ....</p>
           <div className="what_we_do_section_2">
             <div className="row">
-            <div className="col-lg-1 col-sm-2" service-trigger></div>
-              <div className="col-lg-2 col-sm-4" service-trigger>
+            <div className="col-lg-1 col-sm-2"  ></div>
+              <div className="col-lg-2 col-sm-4"  >
                 <div className="box_main">
                   <div className="icon_1" >
                     <FaUser className="fa_track"/>
@@ -308,7 +308,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="col-lg-2 col-sm-4" service-trigger>
+              <div className="col-lg-2 col-sm-4"  >
                 <div className="box_main">
                   <div className="icon_1" >
                     <FaRupeeSign className="fa_track"/>
@@ -321,7 +321,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="col-lg-2 col-sm-4" service-trigger>
+              <div className="col-lg-2 col-sm-4"  >
                 <div className="box_main">
                   <div className="icon_1" >
                     <FaUserTie className="fa_track"/>
@@ -334,7 +334,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="col-lg-2 col-sm-4" service-trigger>
+              <div className="col-lg-2 col-sm-4"  >
                 <div className="box_main">
                   <div className="icon_1" >
                     <FaChartLine className="fa_track"/>
@@ -346,7 +346,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2 col-sm-4" service-trigger>
+              <div className="col-lg-2 col-sm-4"  >
                 <div className="box_main">
                   <div className="icon_1" >
                     <FaGlobe icon="fa-solid fa-lightbulb" className="fa_track" />
@@ -510,12 +510,13 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <form method="" name="">
+                  <form method=" "  name=" " >
                     <div className="row ">
                       <div className="col-xl-3 col-md-6 p-2">
                         <input
                           name="Name"
                           type="text"
+                          autoComplete="name"
                           required
                           placeholder="Full Name"
                           className="form-control"
@@ -525,6 +526,7 @@ export default function Home() {
                         <input
                           name="Email"
                           type="email"
+                           autoComplete="Email"
                           required
                           placeholder="Email Address"
                           className="form-control"
@@ -534,6 +536,7 @@ export default function Home() {
                         <input
                           name="Mobile"
                           type="tel"
+                           autoComplete="Mobile"
                           required
                           placeholder="Mobile No."
                           className="form-control"
@@ -543,6 +546,7 @@ export default function Home() {
                         <input
                           name="Message"
                           type="text"
+                           autoComplete="Message"
                           required
                           placeholder="Message"
                           className="form-control"
